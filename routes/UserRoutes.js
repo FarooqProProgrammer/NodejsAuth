@@ -9,5 +9,6 @@ const Router = express.Router();
 
 
 Router.get("/AuthUsers",userAuth.getUser)
+Router.post("/AuthUserRegister",userAuth.userRegister)
 
 module.exports = Router
