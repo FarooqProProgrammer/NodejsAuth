@@ -1,11 +1,13 @@
 const express = require("express")
+var bodyParser = require('body-parser')
 const db = require('./config/db')
 const userRoutes = require("./routes/UserRoutes")
 
 
-const app = express();
+const app = express()
+app.use(bodyParser.json())
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }));
+
 
 
 // ======================= ALL Routes ==================================
