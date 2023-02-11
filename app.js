@@ -5,7 +5,7 @@ const userRoutes = require("./routes/UserRoutes")
 
 const app = express();
 app.use(express.json())
-
+app.use(express.urlencoded({ extended: true }));
 
 
 // ======================= ALL Routes ==================================
