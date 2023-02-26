@@ -17,7 +17,7 @@ class userAuth {
         const data = new User({
             Name: Name,
             Email: Email,
-            Password: hashPassword
+            Password:hashPassword
         })
         await data.save()
         res.send("Success")
@@ -46,7 +46,7 @@ class userAuth {
 
         const token = await user.generateToken();
         res.header("x-auth", token);
-        res.send({ message: "user Found", data: user })
+        res.send({ message: "user Found", data: user ,token:token})
 
 
 
