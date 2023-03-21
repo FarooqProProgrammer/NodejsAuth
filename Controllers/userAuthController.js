@@ -20,7 +20,7 @@ class userAuth {
             Password:hashPassword
         })
         await data.save()
-        res.send("Success")
+        res.send(data)
     }
 
     // ==================== Login =============================

@@ -25,5 +25,5 @@ userAuthSchema.statics.removeToken = function (token) {
 
         return User.findOneAndUpdate({ _id: decoded._id }, { $pull: { tokens: token } })
 }
-const user = mongoose.model("userAuth", userAuthSchema)
+const user = mongoose.model("userAuthApi", userAuthSchema)
 module.exports = user
